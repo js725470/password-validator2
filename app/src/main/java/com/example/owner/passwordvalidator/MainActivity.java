@@ -10,4 +10,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    public static int Validate(String pass){
+        int rulesPassed=0;
+        if(!pass.equalsIgnoreCase("password"))
+        {
+            rulesPassed++;
+        }
+
+        if(pass.length()>=8)
+        {
+            rulesPassed++;
+        }
+
+
+        return rulesPassed;
+    }
 }
